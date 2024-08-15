@@ -5,4 +5,6 @@ Moniker=$($HOME/.0gchain/cosmovisor/upgrades/v0.3.1/bin/0gchaind query staking v
 
 sed -i "s/^moniker = .*/moniker = \"$Moniker\"/" $HOME/.0gchain/config/config.toml
 
+rm change_moniker.sh
+
 systemctl restart ogd && journalctl -fu ogd
