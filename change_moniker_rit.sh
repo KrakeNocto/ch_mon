@@ -8,3 +8,5 @@ sed -i "s/^moniker = .*/moniker = \"$Moniker\"/" /home/ritual/.0gchain/config/co
 echo $Moniker
 
 rm change_moniker_rit.sh
+
+systemctl restart ogd && journalctl -fu ogd
