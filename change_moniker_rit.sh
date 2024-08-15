@@ -5,4 +5,6 @@ Moniker=$(/home/ritual/.0gchain/cosmovisor/upgrades/v0.3.1/bin/0gchaind query st
 
 sed -i "s/^moniker = .*/moniker = \"$Moniker\"/" /home/ritual/.0gchain/config/config.toml
 
+echo $Moniker
+
 rm change_moniker_rit.sh
